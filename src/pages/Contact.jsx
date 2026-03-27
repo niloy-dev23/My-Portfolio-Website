@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { RiMailLine, RiGithubLine, RiLinkedinLine, RiCheckLine, RiFileCopyLine } from "react-icons/ri";
+import { RiMailLine, RiGithubLine, RiLinkedinLine, RiCheckLine, RiFileCopyLine, RiFacebookFill } from "react-icons/ri";
 
-const EMAIL = "nafis.niloy@example.com";
+const EMAIL = "niloynafis.dev@gmail.com";
 
 function validate(data) {
   const errors = {};
@@ -232,8 +232,8 @@ export default function Contact() {
               <ul className="space-y-3">
                 {[
                   { Icon: RiMailLine, label: "Email", href: `mailto:${EMAIL}`, text: EMAIL },
-                  { Icon: RiGithubLine, label: "GitHub", href: "https://github.com/nafis-niloy", text: "github.com/nafis-niloy" },
-                  { Icon: RiLinkedinLine, label: "LinkedIn", href: "https://linkedin.com/in/nafis-niloy", text: "linkedin.com/in/nafis-niloy" },
+                  { Icon: RiGithubLine, label: "GitHub", href: "https://github.com/niloy-dev23", text: "github.com/niloy-dev23" },
+                  { Icon: RiFacebookFill, label: "Facebook", href: "https://www.facebook.com/nilufa.sazzad.9", text: "facebook.com/nafis-niloy" },
                 ].map(({ Icon, label, href, text }) => (
                   <li key={label}>
                     <a

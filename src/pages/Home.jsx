@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { RiArrowRightLine, RiDownloadLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine, RiStarFill, RiDoubleQuotesL } from "react-icons/ri";
+import { RiArrowRightLine, RiDownloadLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine, RiStarFill, RiDoubleQuotesL, RiFacebookLine, RiFacebookFill, RiInstagramLine } from "react-icons/ri";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
 
@@ -118,24 +118,26 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-5">
               <span className="text-[#64748B] dark:text-[#94A3B8] text-sm">Find me on</span>
-              {[
-                { href: "https://github.com/nafis-niloy", Icon: RiGithubLine, label: "GitHub" },
-                { href: "https://linkedin.com/in/nafis-niloy", Icon: RiLinkedinLine, label: "LinkedIn" },
-                { href: "https://twitter.com", Icon: RiTwitterXLine, label: "Twitter / X" },
-              ].map(({ href, Icon, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="p-2 rounded-lg text-[#64748B] dark:text-[#94A3B8] hover:text-[#3B82F6] dark:hover:text-[#60A5FA] hover:bg-[#3B82F6]/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
-                >
-                  <Icon className="text-xl" aria-hidden="true" />
-                </a>
-              ))}
+              <div className="flex items-center gap-5">
+                {[
+                  { href: "https://github.com/niloy-dev23", Icon: RiGithubLine, label: "GitHub" },
+                  { href: "https://www.facebook.com/nilufa.sazzad.9", Icon: RiFacebookFill  , label: "Facebook" },
+                  { href: "https://www.instagram.com/methane.py/", Icon: RiInstagramLine, label: "Instagram" },
+                ].map(({ href, Icon, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="p-2 rounded-lg text-[#64748B] dark:text-[#94A3B8] hover:text-[#3B82F6] dark:hover:text-[#60A5FA] hover:bg-[#3B82F6]/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
+                  >
+                    <Icon className="text-xl" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
