@@ -3,7 +3,7 @@ import { RiArrowRightLine, RiDownloadLine, RiGithubLine, RiLinkedinLine, RiTwitt
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
 
-const featured = projects.filter((p) => p.featured).slice(0, 2);
+const featured = projects.filter((p) => p.featured).slice(0, 3);
 
 const reviews = [
   {
@@ -169,7 +169,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featured.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}

@@ -1,9 +1,9 @@
-import eCommerce from '../assets/e-commerce.png'
-import todoList from '../assets/todo-list.png'
-import uiPort from '../assets/ui-portfolio.png'
-import canvix from '../assets/canvix-website.png'
-import furniture from '../assets/furniture.png'
-import sign from '../assets/sign-up.png'
+import eCommerce from '../assets/e-commerce.webp'
+import todoList from '../assets/todo-list.webp'
+import uiPort from '../assets/ui-portfolio.webp'
+import canvix from '../assets/canvix-website.webp'
+import furniture from '../assets/furniture.webp'
+import sign from '../assets/sign-up.webp'
 
 export const projects = [
   {
@@ -40,7 +40,7 @@ export const projects = [
     techStack: ["CSS", "JavaScript", "HTML"],
     liveUrl: "https://todo-list-theta-seven-70.vercel.app/",
     repoUrl: "https://github.com/niloy-dev23/Todo-List",
-    featured: false,
+    featured:true,
   },
   {
     id: "4",
