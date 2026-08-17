@@ -38,6 +38,13 @@ const timeline = [
     type: "education",
   },
   {
+    year: "2026",
+    role: "NSDA Level 3 Certification",
+    org: "National Skill Development Authority (NSDA) of Bangladesh",
+    desc: "Achieved Level 3 certification in Web Design, demonstrating advanced proficiency in web technologies and development practices.",
+    type: "work",
+  },
+  {
     year: "2025",
     role: "Frontend Development Course",
     org: "Creative IT Institute",

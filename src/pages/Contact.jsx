@@ -48,7 +48,7 @@ export default function Contact() {
 
   const copyContact = async () => {
     const data = JSON.stringify(
-      { name: "Nafis Sazzad Niloy", email: EMAIL, github: "github.com/nafis-niloy", linkedin: "linkedin.com/in/nafis-niloy" },
+      { name: "Nafis Sazzad Niloy", email: EMAIL, github: "github.com/niloy-dev23", linkedin: "linkedin.com/in/nafis-niloy" },
       null,
       2
     );

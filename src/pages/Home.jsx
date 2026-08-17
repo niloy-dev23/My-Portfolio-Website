@@ -12,7 +12,7 @@ const reviews = [
     company: "Nexlify",
     avatar: "SC",
     rating: 5,
-    text: "Nafis completely transformed our product's frontend. The code is clean, well-architected, and the performance improvements were immediately measurable. Our Lighthouse score went from 62 to 97. Genuinely one of the best engineers I've worked with.",
+    text: "Nafis completely transformed our product's frontend. The code is clean, well-architected, and instantly faster — our Lighthouse score jumped from 62 to 97. One of the best engineers I've ever worked with.",
   },
   {
     name: "James Okafor",
@@ -20,7 +20,7 @@ const reviews = [
     company: "LaunchPad",
     avatar: "JO",
     rating: 5,
-    text: "Incredible attention to detail. Nafis built our entire MVP in six weeks — on time and under budget. He proactively flagged design inconsistencies and suggested UX improvements we hadn't even considered. Will definitely be working together again.",
+    text: "Incredible attention to detail. Nafis built our entire MVP in six weeks — on time and under budget. He flagged design inconsistencies and suggested UX improvements. Will definitely be working together again.",
   },
   {
     name: "Priya Sharma",
@@ -73,7 +73,7 @@ export default function Home() {
         className="min-h-[92vh] flex items-center bg-[#F8FAFC] dark:bg-[#0F172A] px-4 sm:px-6 lg:px-8"
         aria-labelledby="hero-heading"
       >
-        <div className="max-w-6xl mx-auto w-full py-20">
+        <div className="max-w-6xl mx-auto w-full py-20 flex justify-betwen items-center">
           <div className="max-w-3xl animate-[fadeSlideUp_0.6s_ease_both]">
             <p className="text-[#3B82F6] dark:text-[#60A5FA] text-sm font-semibold tracking-widest uppercase mb-4">
               Available for hire
@@ -140,6 +140,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div></div>
         </div>
       </section>
 
