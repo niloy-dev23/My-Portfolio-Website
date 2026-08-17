@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { RiArrowRightLine, RiDownloadLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine, RiStarFill, RiDoubleQuotesL, RiFacebookLine, RiFacebookFill, RiInstagramLine } from "react-icons/ri";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
+import PFP from "../assets/PFP.webp";
 
 const featured = projects.filter((p) => p.featured).slice(0, 3);
 
@@ -140,7 +141,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div></div>
+          <div className="shrink-0 hidden lg:block">
+            <img
+              src={PFP}
+              alt="Nafis Sazzad Niloy profile picture"
+              className="w-[420px] h-auto max-w-full rounded-xl shadow-2xl"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
         </div>
       </section>
 
