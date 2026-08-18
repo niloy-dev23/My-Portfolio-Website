@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { RiGithubLine, RiLinkedinBoxLine, RiTwitterXLine, RiMailLine } from "react-icons/ri";
+import { RiGithubLine, RiInstagramLine, RiFacebookFill } from "react-icons/ri";
 
 const footerLinks = [
   { to: "/", label: "Home" },
@@ -15,19 +15,14 @@ const socialLinks = [
     label: "GitHub",
   },
   {
-    href: "https://linkedin.com",
-    icon: RiLinkedinBoxLine,
-    label: "LinkedIn",
+    href: "https://www.instagram.com/methane.py/",
+    icon: RiInstagramLine,
+    label: "Instagram",
   },
   {
-    href: "https://twitter.com",
-    icon: RiTwitterXLine,
-    label: "Twitter",
-  },
-  {
-    href: "mailto:contact@example.com",
-    icon: RiMailLine,
-    label: "Email",
+    href: "https://www.facebook.com/nilufa.sazzad.9",
+    icon: RiFacebookFill,
+    label: "Facebook",
   },
 ];
 
@@ -73,7 +68,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold text-[#1E293B] dark:text-[#F1F5F9] mb-4">
               Connect
             </h3>
-            <div className="flex gap-3">
+            <div className="flex gap-5">
               {socialLinks.map(({ href, icon: Icon, label }) => (
                 <a
                   key={label}
@@ -81,9 +76,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-2.5 rounded-lg bg-[#E2E8F0] dark:bg-[#1E293B] text-[#1E293B] dark:text-[#F1F5F9] hover:bg-[#3B82F6] hover:text-white dark:hover:bg-[#3B82F6] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
+                  className="p-2 rounded-lg text-[#64748B] dark:text-[#94A3B8] hover:text-[#3B82F6] dark:hover:text-[#60A5FA] hover:bg-[#3B82F6]/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
                 >
-                  <Icon className="text-lg" aria-hidden="true" />
+                  <Icon className="text-xl" aria-hidden="true" />
                 </a>
               ))}
             </div>
