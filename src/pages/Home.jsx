@@ -205,9 +205,9 @@ export default function Home() {
           <h2 id="stats-heading" className="sr-only">Career highlights</h2>
           <dl className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: "5+", label: "Years of experience" },
-              { value: "30+", label: "Projects delivered" },
-              { value: "12+", label: "Happy clients" },
+              { value: "0", label: "Years of experience ( currently learning :)" },
+              { value: "2", label: "Projects delivered" },
+              { value: "1", label: "Happy clients" },
               { value: "100%", label: "Open-source friendly" },
             ].map(({ value, label }) => (
               <div
