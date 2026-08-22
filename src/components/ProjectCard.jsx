@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
   console.log(project.image)
   return (
     <article
-      className="group bg-white dark:bg-[#1E293B] rounded-2xl overflow-hidden border border-[#1E293B]/10 dark:border-[#F1F5F9]/10 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col"
+      className="group bg-[#1E293B] rounded-2xl overflow-hidden border border-[#F1F5F9]/10 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col"
       aria-label={`Project: ${project.title}`}
     >
       <div
@@ -26,11 +26,11 @@ export default function ProjectCard({ project }) {
       </div>
 
       <div className="p-5 flex flex-col flex-1 gap-3">
-        <h3 className="text-[#1E293B] dark:text-[#F1F5F9] font-semibold text-lg leading-tight">
+        <h3 className="text-[#F1F5F9] font-semibold text-lg leading-tight">
           {project.title}
         </h3>
 
-        <p className="text-[#64748B] dark:text-[#94A3B8] text-sm leading-relaxed flex-1">
+        <p className="text-[#94A3B8] text-sm leading-relaxed flex-1">
           {project.description}
         </p>
 
@@ -38,7 +38,7 @@ export default function ProjectCard({ project }) {
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#3B82F6]/10 text-[#3B82F6] dark:bg-[#60A5FA]/10 dark:text-[#60A5FA]"
+              className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#3B82F6]/10 text-[#3B82F6]"
             >
               {tech}
             </span>
@@ -51,7 +51,7 @@ export default function ProjectCard({ project }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${project.title} live demo`}
-            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-[#3B82F6] hover:bg-[#2563EB] dark:bg-[#60A5FA] dark:hover:bg-[#3B82F6] text-white dark:text-[#0F172A] text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] focus-visible:ring-offset-2"
+            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-[#3B82F6] hover:bg-[#2563EB] text-white text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] focus-visible:ring-offset-2"
           >
             <RiExternalLinkLine className="text-base shrink-0" aria-hidden="true" />
             Live Demo
@@ -61,7 +61,7 @@ export default function ProjectCard({ project }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${project.title} source code on GitHub`}
-            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-[#1E293B] hover:bg-[#0F172A] dark:bg-[#F1F5F9] dark:hover:bg-white text-white dark:text-[#0F172A] text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1E293B] focus-visible:ring-offset-2"
+            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-[#F1F5F9] hover:bg-white text-[#0F172A] text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F1F5F9] focus-visible:ring-offset-2"
           >
             <RiGithubLine className="text-base shrink-0" aria-hidden="true" />
             GitHub

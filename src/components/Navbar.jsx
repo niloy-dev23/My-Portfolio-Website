@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
-import { RiMoonLine, RiSunLine, RiMenuLine, RiCloseLine, RiCodeSSlashLine } from "react-icons/ri";
-import { useTheme } from "../context/ThemeContext";
+import { RiMenuLine, RiCloseLine, RiCodeSSlashLine } from "react-icons/ri";
 
 const links = [
   { to: "/", label: "Home" },
@@ -11,7 +10,6 @@ const links = [
 ];
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -28,7 +26,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 bg-[#F8FAFC]/90 dark:bg-[#0F172A]/90 border-b border-[#1E293B]/10 dark:border-[#F1F5F9]/10 backdrop-blur-md"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A]/90 border-b border-[#F1F5F9]/10 backdrop-blur-md"
       role="banner"
     >
       {/* Scroll progress bar */}
@@ -44,10 +42,10 @@ export default function Navbar() {
       >
         <NavLink
           to="/"
-          className="flex items-center gap-2 text-[#1E293B] dark:text-[#F1F5F9] font-bold text-lg tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] rounded"
+          className="flex items-center gap-2 text-[#F1F5F9] font-bold text-lg tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] rounded"
           aria-label="Home — Nafis Sazzad Niloy"
         >
-          <RiCodeSSlashLine className="text-[#3B82F6] dark:text-[#60A5FA] text-2xl" aria-hidden="true" />
+          <RiCodeSSlashLine className="text-[#60A5FA] text-2xl" aria-hidden="true" />
           <span>Nafis Sazzad Niloy</span>
         </NavLink>
 
@@ -60,46 +58,23 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `px-4 py-2 rounded-lg text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] ${
                   isActive
-                    ? "text-[#3B82F6] dark:text-[#60A5FA] bg-[#3B82F6]/10"
-                    : "text-[#64748B] dark:text-[#94A3B8] hover:text-[#1E293B] dark:hover:text-[#F1F5F9] hover:bg-[#1E293B]/5 dark:hover:bg-[#F1F5F9]/5"
+                    ? "text-[#60A5FA] bg-[#3B82F6]/10"
+                    : "text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#F1F5F9]/5"
                 }`
               }
             >
               {label}
             </NavLink>
           ))}
-
-          <button
-            onClick={toggleTheme}
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-            className="ml-2 p-2 rounded-lg text-[#64748B] dark:text-[#94A3B8] hover:text-[#1E293B] dark:hover:text-[#F1F5F9] hover:bg-[#1E293B]/5 dark:hover:bg-[#F1F5F9]/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
-          >
-            {theme === "light" ? (
-              <RiMoonLine className="text-xl" aria-hidden="true" />
-            ) : (
-              <RiSunLine className="text-xl" aria-hidden="true" />
-            )}
-          </button>
         </div>
 
         <div className="flex md:hidden items-center gap-2">
-          <button
-            onClick={toggleTheme}
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-            className="p-2 rounded-lg text-[#64748B] dark:text-[#94A3B8] hover:bg-[#1E293B]/5 dark:hover:bg-[#F1F5F9]/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
-          >
-            {theme === "light" ? (
-              <RiMoonLine className="text-xl" aria-hidden="true" />
-            ) : (
-              <RiSunLine className="text-xl" aria-hidden="true" />
-            )}
-          </button>
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-            className="p-2 rounded-lg text-[#64748B] dark:text-[#94A3B8] hover:bg-[#1E293B]/5 dark:hover:bg-[#F1F5F9]/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
+            className="p-2 rounded-lg text-[#94A3B8] hover:bg-[#F1F5F9]/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6]"
           >
             {menuOpen ? (
               <RiCloseLine className="text-xl" aria-hidden="true" />
@@ -113,7 +88,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden bg-[#F8FAFC] dark:bg-[#0F172A] border-t border-[#1E293B]/10 dark:border-[#F1F5F9]/10 px-4 pb-4"
+          className="md:hidden bg-[#0F172A] border-t border-[#F1F5F9]/10 px-4 pb-4"
           role="navigation"
           aria-label="Mobile navigation"
         >
@@ -126,8 +101,8 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `block px-4 py-3 rounded-lg text-sm font-medium mt-1 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] ${
                   isActive
-                    ? "text-[#3B82F6] dark:text-[#60A5FA] bg-[#3B82F6]/10"
-                    : "text-[#64748B] dark:text-[#94A3B8] hover:text-[#1E293B] dark:hover:text-[#F1F5F9] hover:bg-[#1E293B]/5 dark:hover:bg-[#F1F5F9]/5"
+                    ? "text-[#60A5FA] bg-[#3B82F6]/10"
+                    : "text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#F1F5F9]/5"
                 }`
               }
             >

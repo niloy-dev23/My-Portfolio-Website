@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
-import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -11,14 +10,14 @@ function NotFound() {
   return (
     <main
       id="main-content"
-      className="pt-16 min-h-screen flex items-center justify-center bg-[#F8FAFC] dark:bg-[#0F172A]"
+      className="pt-16 min-h-screen flex items-center justify-center bg-[#0F172A]"
     >
       <div className="text-center px-4">
-        <p className="text-7xl font-black text-[#3B82F6] dark:text-[#60A5FA] mb-4">404</p>
-        <h1 className="text-2xl font-bold text-[#1E293B] dark:text-[#F1F5F9] mb-2">
+        <p className="text-7xl font-black text-[#60A5FA] mb-4">404</p>
+        <h1 className="text-2xl font-bold text-[#F1F5F9] mb-2">
           Page not found
         </h1>
-        <p className="text-[#64748B] dark:text-[#94A3B8] mb-6">
+        <p className="text-[#94A3B8] mb-6">
           The page you're looking for doesn't exist.
         </p>
         <a
@@ -71,9 +70,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <ThemeProvider>
-      <RouterProvider router={router} future={{ v7_startTransition: true }} />
-    </ThemeProvider>
+    <RouterProvider router={router} future={{ v7_startTransition: true }} />
   );
 }
 

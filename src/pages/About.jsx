@@ -73,7 +73,7 @@ function SkillCard({ skill, index, visible }) {
         transform: visible ? "translateY(0) scale(1)" : "translateY(20px) scale(0.92)",
         transition: `opacity 0.45s ease ${delay}, transform 0.45s ease ${delay}, box-shadow 0.3s ease`,
       }}
-      className="group relative flex flex-col items-center gap-3 p-5 rounded-2xl bg-white dark:bg-[#1E293B] border border-[#1E293B]/10 dark:border-[#F1F5F9]/10 shadow-sm cursor-default hover:shadow-md"
+      className="group relative flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#1E293B] border border-[#F1F5F9]/10 shadow-sm cursor-default hover:shadow-md"
     >
       <div
         className="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
@@ -83,7 +83,7 @@ function SkillCard({ skill, index, visible }) {
         <Icon style={{ color }} className="text-2xl" />
       </div>
 
-      <span className="text-xs font-semibold text-[#1E293B] dark:text-[#F1F5F9] text-center leading-tight">
+      <span className="text-xs font-semibold text-[#F1F5F9] text-center leading-tight">
         {name}
       </span>
 
@@ -117,16 +117,16 @@ export default function About() {
   }, []);
 
   return (
-    <main id="main-content" className="pt-16 bg-[#F8FAFC] dark:bg-[#0F172A] min-h-screen">
+    <main id="main-content" className="pt-16 bg-[#0F172A] min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-14">
-          <p className="text-[#3B82F6] dark:text-[#60A5FA] text-sm font-semibold tracking-widest uppercase mb-3">
+          <p className="text-[#60A5FA] text-sm font-semibold tracking-widest uppercase mb-3">
             About Me
           </p>
-          <h1 className="text-4xl font-bold text-[#1E293B] dark:text-[#F1F5F9] mb-4">
+          <h1 className="text-4xl font-bold text-[#F1F5F9] mb-4">
             The person behind the code
           </h1>
-          <p className="text-[#64748B] dark:text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
+          <p className="text-[#94A3B8] text-lg max-w-2xl leading-relaxed">
             I'm a passionate frontend developer based in Dhaka with a love for building
             user-centric web applications. I enjoy the intersection of great design and
             clean, performant engineering.
@@ -136,11 +136,11 @@ export default function About() {
         <section aria-labelledby="bio-heading" className="mb-16">
           <h2
             id="bio-heading"
-            className="text-2xl font-bold text-[#1E293B] dark:text-[#F1F5F9] mb-5"
+            className="text-2xl font-bold text-[#F1F5F9] mb-5"
           >
             Bio
           </h2>
-          <div className="max-w-2xl space-y-4 text-[#64748B] dark:text-[#94A3B8] leading-relaxed">
+          <div className="max-w-2xl space-y-4 text-[#94A3B8] leading-relaxed">
             <p>
               I fell in love with web development after customising my first website and
               seeing it come to life in the browser. Since then, I've never stopped building.
@@ -161,12 +161,12 @@ export default function About() {
 
         <section aria-labelledby="skills-heading" className="mb-20" ref={skillsRef}>
           <div className="mb-8">
-            <p className="text-[#3B82F6] dark:text-[#60A5FA] text-sm font-semibold tracking-widest uppercase mb-2">
+            <p className="text-[#60A5FA] text-sm font-semibold tracking-widest uppercase mb-2">
               Toolbox
             </p>
             <h2
               id="skills-heading"
-              className="text-2xl font-bold text-[#1E293B] dark:text-[#F1F5F9]"
+              className="text-2xl font-bold text-[#F1F5F9]"
             >
               Skills & Technologies
             </h2>
@@ -190,12 +190,12 @@ export default function About() {
 
         <section aria-labelledby="timeline-heading">
           <div className="mb-10">
-            <p className="text-[#3B82F6] dark:text-[#60A5FA] text-sm font-semibold tracking-widest uppercase mb-2">
+            <p className="text-[#60A5FA] text-sm font-semibold tracking-widest uppercase mb-2">
               Journey
             </p>
             <h2
               id="timeline-heading"
-              className="text-2xl font-bold text-[#1E293B] dark:text-[#F1F5F9]"
+              className="text-2xl font-bold text-[#F1F5F9]"
             >
               Experience & Education
             </h2>
@@ -203,7 +203,7 @@ export default function About() {
 
           <ol className="relative" aria-label="Career and education timeline">
             <div
-              className="absolute left-3 top-0 bottom-0 w-px bg-[#1E293B]/15 dark:bg-[#F1F5F9]/15"
+              className="absolute left-3 top-0 bottom-0 w-px bg-[#F1F5F9]/15"
               aria-hidden="true"
             />
 
@@ -212,8 +212,8 @@ export default function About() {
                 <div
                   className={`absolute left-0 w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                     item.type === "work"
-                      ? "bg-[#3B82F6] dark:bg-[#60A5FA] border-[#3B82F6] dark:border-[#60A5FA]"
-                      : "bg-white dark:bg-[#1E293B] border-[#3B82F6] dark:border-[#60A5FA]"
+                      ? "bg-[#60A5FA] border-[#60A5FA]"
+                      : "bg-[#1E293B] border-[#60A5FA]"
                   }`}
                   aria-hidden="true"
                 >
@@ -222,17 +222,17 @@ export default function About() {
                   )}
                 </div>
 
-                <div className="bg-white dark:bg-[#1E293B] rounded-2xl p-5 border border-[#1E293B]/10 dark:border-[#F1F5F9]/10 shadow-sm">
-                  <time className="text-xs font-semibold text-[#3B82F6] dark:text-[#60A5FA] tracking-wide uppercase">
+                <div className="bg-[#1E293B] rounded-2xl p-5 border border-[#F1F5F9]/10 shadow-sm">
+                  <time className="text-xs font-semibold text-[#60A5FA] tracking-wide uppercase">
                     {item.year}
                   </time>
-                  <h3 className="text-[#1E293B] dark:text-[#F1F5F9] font-semibold text-lg mt-1">
+                  <h3 className="text-[#F1F5F9] font-semibold text-lg mt-1">
                     {item.role}
                   </h3>
-                  <p className="text-[#64748B] dark:text-[#94A3B8] text-sm font-medium mb-2">
+                  <p className="text-[#94A3B8] text-sm font-medium mb-2">
                     {item.org}
                   </p>
-                  <p className="text-[#64748B] dark:text-[#94A3B8] text-sm leading-relaxed">
+                  <p className="text-[#94A3B8] text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

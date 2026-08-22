@@ -28,23 +28,6 @@
 }
 
 :root {
-  --background: #F8FAFC;
-  --foreground: #1E293B;
-  --border: rgba(30, 41, 59, 0.12);
-  --card: #FFFFFF;
-  --card-foreground: #1E293B;
-  --primary: #3B82F6;
-  --primary-foreground: #FFFFFF;
-  --muted: #F1F5F9;
-  --muted-foreground: #64748B;
-  --accent: #3B82F6;
-  --accent-foreground: #FFFFFF;
-  --destructive: #EF4444;
-  --input: rgba(30, 41, 59, 0.15);
-  --ring: #3B82F6;
-}
-
-.dark {
   --background: #0F172A;
   --foreground: #F1F5F9;
   --border: rgba(241, 245, 249, 0.10);
@@ -95,5 +78,3 @@
     transform: translateY(0);
   }
 }
-
-
